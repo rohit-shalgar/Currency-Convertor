@@ -1,0 +1,10 @@
+ Spring-Cloud-Config dependency is required for client.
+ Spring-Cloud-Config.Server dependency is required for the server
+ bootstrap.yml vs application.yml :
+    - bootstrap yml is loaded before application.yml and
+        there is something known as bootstrap contex that is created at the application startup.
+    - this file contains uri for config server and application name, so before application.properties are loaded
+        all the properties are downloaded from config server.
+ Starting spring boot V2 - this is not required, you need spring.config.import property
+ and pass in the URI for the Config server along with the spring.application.name.
+ **- config server must have the property file with the same name as application name-**
