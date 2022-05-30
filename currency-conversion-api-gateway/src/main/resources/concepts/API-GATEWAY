@@ -1,0 +1,6 @@
+API GATEWAY-
+    .used to implement common cross cutting API features - authentication,logging
+    .reverse proxy pattern
+    .we can do a routing using routelocator builder and reroute incoming calls to eureka using
+        lib:// property
+    .Spring V1 was zuul, V2 is spring-cloud-gateway or API router.

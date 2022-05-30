@@ -1,0 +1,6 @@
+Feign client will check for the service with the name property.
+Netflix client comes with a embedded load balancer dependency.
+Open feign makes use of this embedded code and distributes the load between all the running instances
+
+-Dserver.port
+-Dspring.profile
