@@ -1,0 +1,14 @@
+Retry and fallback mechanism:
+
+    - if a method throws exception on a failure, automatically @Retry will be triggered and fallback
+        method will be called.
+
+Circuit Breaker-
+    - closed, open ,half open
+    - if failures are above threshhold, circuit breaker opens and calls the fallback method
+    - after a delay it goes into half open state and check if the requests are still failing
+
+Number of retries, fallback method, backoff time, exponential backoffs are all configurable in application.properties
+
+Rate limiter and bulk head:
+    - you can limit number of calls in a particular period and number of concurrent calls to the API
